@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\luuk_\\source\\repos\\RitoAPI\\RitoAPI\\RitoAPI.csproj": {}
+    "C:\\Users\\Axel\\Documents\\SummonerStatz\\RitoAPI\\RitoAPI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\luuk_\\source\\repos\\RitoAPI\\RitoAPI\\RitoAPI.csproj": {
+    "C:\\Users\\Axel\\Documents\\SummonerStatz\\RitoAPI\\RitoAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\luuk_\\source\\repos\\RitoAPI\\RitoAPI\\RitoAPI.csproj",
+        "projectUniqueName": "C:\\Users\\Axel\\Documents\\SummonerStatz\\RitoAPI\\RitoAPI.csproj",
         "projectName": "RitoAPI",
-        "projectPath": "C:\\Users\\luuk_\\source\\repos\\RitoAPI\\RitoAPI\\RitoAPI.csproj",
-        "packagesPath": "C:\\Users\\luuk_\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\luuk_\\source\\repos\\RitoAPI\\RitoAPI\\obj\\",
+        "projectPath": "C:\\Users\\Axel\\Documents\\SummonerStatz\\RitoAPI\\RitoAPI.csproj",
+        "packagesPath": "C:\\Users\\Axel\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Axel\\Documents\\SummonerStatz\\RitoAPI\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\luuk_\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Axel\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -38,6 +38,24 @@
       "frameworks": {
         "netcoreapp3.0": {
           "dependencies": {
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[3.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.0.0, )"
+            },
+            "Microsoft.Extensions.Logging.Debug": {
+              "target": "Package",
+              "version": "[3.0.0, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[3.0.0, )"
+            },
             "Newtonsoft.Json": {
               "target": "Package",
               "version": "[12.0.3, )"
