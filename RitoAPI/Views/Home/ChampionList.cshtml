@@ -1,0 +1,34 @@
+﻿@model ChampionList
+
+@{
+    ViewData["Title"] = "Champion List";
+}
+
+<h1>ChampionList</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Champion
+            </th>
+            <th>
+                Title
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Data.Values) {
+        <tr>
+            <td>
+                @Html.ActionLink(item.id, "showChampion", "Home", new { id = item.id }, null)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.title)
+            </td>
+           
+        </tr>
+}
+    </tbody>
+</table>
