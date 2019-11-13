@@ -20,14 +20,18 @@
     </thead>
     <tbody>
 @foreach (var item in Model.Data.Values) {
+    var imageFile = $"{item.id}.png";
         <tr>
+            <td>
+              <img src="~/championImg/@imageFile " />
+            </td>
             <td>
                 @Html.ActionLink(item.id, "showChampion", "Home", new { id = item.id }, null)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.title)
             </td>
-           
+
         </tr>
 }
     </tbody>

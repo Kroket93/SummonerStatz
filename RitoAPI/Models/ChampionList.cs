@@ -9,11 +9,13 @@ namespace RitoAPI.Models
 {
     public class ChampionList
     {
-
-        public Dictionary<string, Champion> Data { get; set; }
-        public ChampionList()
+        public String id;
+        public String title;
+        public Dictionary<string, ChampionList> Data { get; set; }
+        public ChampionList(string id, string title)
         {
-       
+            this.id = id;
+            this.title = title;
         }
 
     }

@@ -8,13 +8,8 @@ namespace RitoAPI.Models
     public class Champion
     {
 
-        public String id;
-        public String title;
+      
 
-        public Champion(string id, string title)
-        {
-            this.id = id;
-            this.title = title;
-        }
+       
     }
 }
