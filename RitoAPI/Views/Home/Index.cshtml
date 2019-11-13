@@ -1,5 +1,5 @@
 ﻿@using RitoAPI.Models
-@model ChampRotationModel
+@model MatchListModel
 @{
     ViewData["Title"] = "Home Page";
 }
@@ -10,11 +10,5 @@
 </div>
 
 @{ 
-    foreach(int id in Model.freeChampionIds)
-    {
-        @id
-        <br />
-    }
-
-    @Model.maxNewPlayerLevel
+    @Model.matches
 }

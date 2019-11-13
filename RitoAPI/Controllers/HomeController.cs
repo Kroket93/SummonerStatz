@@ -38,16 +38,15 @@ namespace RitoAPI.Controllers
 
         public async Task<IActionResult> Index()
         {
-            List<int> champIdList = new List<int>();
             string apiResponse;
             using (HttpClient httpClient = new HttpClient())
             {
-                using (var response = await httpClient.GetAsync("https://euw1.api.riotgames.com/lol/platform/v3/champion-rotations?api_key=RGAPI-a066c4c3-9002-4f76-9b19-66ad592de193"))
+                using (var response = await httpClient.GetAsync("https://euw1.api.riotgames.com/lol/match/v4/matchlists/by-account/TLiaxqc7UTMvucJxQtYnayZ124LwYv-Oa9fEYwOyGKwJHg?api_key=RGAPI-a066c4c3-9002-4f76-9b19-66ad592de193"))
                 {
                     apiResponse = await response.Content.ReadAsStringAsync();
                 }
             }
-            var result = JsonConvert.DeserializeObject<ChampRotationModel>(apiResponse);
+            var result = JsonConvert.DeserializeObject<MatchListModel>(apiResponse);
             // = apiResponse;
 
             return View(result);
