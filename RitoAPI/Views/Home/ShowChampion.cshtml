@@ -1,0 +1,11 @@
+﻿@using RitoAPI.Models
+@model Champion
+@{
+    ViewData["Title"] = "Champion";
+     var imageFile = $"{Model.id}.png";
+}
+
+<img src="~/championImg/@imageFile"/>
+<h1>@Model.id</h1>
+<h2>@Model.title</h2>
+<p>@Model.lore</p>

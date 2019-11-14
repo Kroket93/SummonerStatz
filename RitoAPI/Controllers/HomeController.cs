@@ -41,7 +41,7 @@ namespace RitoAPI.Controllers
             string apiResponse;
             using (HttpClient httpClient = new HttpClient())
             {
-                using (var response = await httpClient.GetAsync("https://euw1.api.riotgames.com/lol/platform/v3/champion-rotations?api_key=RGAPI-9f7f6c27-ba1a-4f98-8a4c-c5fb428fdb1e"))
+                using (var response = await httpClient.GetAsync("https://euw1.api.riotgames.com/lol/platform/v3/champion-rotations?api_key=RGAPI-2eb76fb5-905e-4f8e-8589-65f2e7911b02"))
                 {
                     if (!response.IsSuccessStatusCode)
                         throw new Exception("Not a valid response");
@@ -71,19 +71,17 @@ namespace RitoAPI.Controllers
             return View(result);
         }
 
-        public async Task<IActionResult> showChampion(String id)
+        public async Task<IActionResult> ShowChampion(String id)
         {
-            Champion champion;
             string apiResponse;
             using (HttpClient httpClient = new HttpClient())
             {
-                using (var response = await httpClient.GetAsync("http://ddragon.leagueoflegends.com/cdn/9.22.1/data/en_US/champion.json/" + id + ""))
+                using (var response = await httpClient.GetAsync("http://ddragon.leagueoflegends.com/cdn/9.22.1/data/en_US/champion/" + id + ".json"))
                 {
                     apiResponse = await response.Content.ReadAsStringAsync();
                 }
             }
-            var result = JsonConvert.DeserializeObject<ChampionList>(apiResponse);
-
+            Champion result = new Champion(apiResponse, id);
             // = apiResponse;
 
             return View(result);
